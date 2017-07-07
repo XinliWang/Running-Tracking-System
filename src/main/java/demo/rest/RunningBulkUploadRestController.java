@@ -32,6 +32,4 @@ public class RunningBulkUploadRestController {
     public Page<Location> findByRunningId(@PathVariable String runningId, @RequestParam(name = "page") int page, @RequestParam(name = "size") int size) {
         return this.locationService.findByRunningId(runningId, new PageRequest(page, size));
     }
-
-
 }
