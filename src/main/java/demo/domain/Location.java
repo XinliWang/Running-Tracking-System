@@ -16,7 +16,7 @@ import java.util.Date;
 @Data
 public class Location {
     enum GpsStatus {
-        EXCELENT, OK, UNRELIABLE, BAD, NOFIX, UNKNOWN;
+        EXCELLENT, OK, UNRELIABLE, BAD, NOFIX, UNKNOWN;
     }
 
     public enum RunnerMovementType {
@@ -42,7 +42,7 @@ public class Location {
     @Embedded
     @AttributeOverride(name = "bandMake", column = @Column(name = "unit_band_make"))
     //bandMake is called unit_band_make in DATABASE
-    private UnitInfo unitInfo;
+    private final UnitInfo unitInfo;
 
     private double latitude;
     private double longitude;
